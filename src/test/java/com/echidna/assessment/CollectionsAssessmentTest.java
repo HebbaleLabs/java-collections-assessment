@@ -62,7 +62,7 @@ public class CollectionsAssessmentTest {
     @Test
     public void testfindStringDuplicates() {
         CollectionsAssessment assessment = new CollectionsAssessment();
-        int index = assessment.findString(Arrays.asList(new String[]{"1","4","2","3","7","8","6","3"}),"2");
+        int index = assessment.findString(Arrays.asList(new String[]{"1","4","2","3","7","8","6","3"}),"3");
         assertEquals(3, index);
     }
     
