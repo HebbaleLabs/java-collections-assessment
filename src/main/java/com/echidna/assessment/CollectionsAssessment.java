@@ -13,6 +13,7 @@ public class CollectionsAssessment {
     }
 
     public static void main(String[] args) {
-        System.out.println("This main method would be invoked by running 'mvn -q compiler:compile exec:java' in the terminal.");
+        System.out.println("This main method can be invoked by running 'mvn -q compiler:compile exec:java' in the terminal.\n");
+        System.out.println("You will need to switch to the 'java-collections-assessment directory' by running 'cd /projects/java-collections-assessment'\n");
     }
 }
