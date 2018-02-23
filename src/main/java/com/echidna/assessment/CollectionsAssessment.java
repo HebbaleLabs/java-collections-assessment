@@ -11,4 +11,8 @@ public class CollectionsAssessment {
     public int findString(List<String> stringList, String searchString) {
         return -1;
     }
+
+    public static void main(String[] args) {
+        System.out.println("This main method would be invoked by running 'mvn -q compiler:compile exec:java' in the terminal.");
+    }
 }
