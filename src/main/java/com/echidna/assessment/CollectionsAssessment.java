@@ -9,7 +9,7 @@ public class CollectionsAssessment {
     }
     
     public int findString(List<String> stringList, String searchString) {
-        return -1;
+        return Integer.MIN_VALUE;
     }
 
     public static void main(String[] args) {
