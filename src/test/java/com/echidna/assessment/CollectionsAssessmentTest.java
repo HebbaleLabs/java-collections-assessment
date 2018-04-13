@@ -1,10 +1,15 @@
 package com.echidna.assessment;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
@@ -85,5 +90,26 @@ public class CollectionsAssessmentTest {
         CollectionsAssessment assessment = new CollectionsAssessment();
         int index = assessment.findString(Arrays.asList(new String[]{"1","4","2","3","7","8","6"}),"6");
         assertEquals(6, index);
+    }
+
+    @Test
+    public void testCheckUsageOfCollectionsSort() {
+        boolean hasUsed = false;
+        BufferedReader br = null;
+        String strLine = "";
+        String fileName = "src/main/java/com/echidna/assessment/CollectionsAssessment.java";
+        try {
+            br = new BufferedReader( new FileReader(fileName));
+            while( (strLine = br.readLine()) != null){
+                if(strLine.contains("Collections.sort")){
+                    hasUsed = true;
+                }
+            }
+            assertEquals("Collections.sort() has been used", false , hasUsed);
+        } catch (FileNotFoundException e) {
+            System.err.println("Unable to find the file: " + fileName);
+        } catch (IOException e) {
+            System.err.println("Unable to read the file: " + fileName);
+        }
     }
 }
